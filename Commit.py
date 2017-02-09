@@ -20,3 +20,4 @@ while 1:
 f = open('version.xml', 'w')
 f.write(version)
 f.close()
+print(version)
