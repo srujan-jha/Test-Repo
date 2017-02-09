@@ -5,7 +5,7 @@ try:
         if not (args[1] == "refs/heads/nightly" or args[1] == "refs/heads/staging" or args[1] == "refs/heads/production"):
             sys.exit(1)
 except getopt.GetoptError as err:
-    print str(err) # will print something like "option -a not recognized"
+    print str(err)
     sys.exit(2)
 version="patch"
 while 1:
@@ -20,4 +20,3 @@ while 1:
 f = open('version.xml', 'w')
 f.write(version)
 f.close()
-print(version)
